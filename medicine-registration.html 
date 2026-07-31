@@ -1,29 +1,15 @@
-<!DOCTYPE html>
-<html>
-<head>
-  <title>Medicine Registration</title>
-  <link rel="stylesheet" href="style.css">
-</head>
-<body>
-  <h1>Medicine Registration</h1>
+<form id="medicineForm">
+  <label>Medicine Name:</label><br>
+  <input type="text" id="medicineName"><br><br>
 
-  <form>
-    <label>Medicine Name:</label><br>
-    <input type="text"><br><br>
+  <label>Batch Number:</label><br>
+  <input type="text" id="batchNumber"><br><br>
 
-    <label>Batch Number:</label><br>
-    <input type="text"><br><br>
+  <label>Quantity:</label><br>
+  <input type="number" id="quantity"><br><br>
 
-    <label>Quantity:</label><br>
-    <input type="number"><br><br>
+  <label>Expiry Date:</label><br>
+  <input type="date" id="expiryDate"><br><br>
 
-    <label>Expiry Date:</label><br>
-    <input type="date"><br><br>
-
-    <button type="submit">Save</button>
-  </form>
-
-  <br>
-  <a href="index.html">Back to Home</a>
-</body>
-</html>
+  <button type="button" onclick="saveMedicine()">Save</button>
+</form>
