@@ -9,7 +9,7 @@
 <h1>Medicine Registration</h1>
 
 <form id="medicineForm">
-  <label>Medicine Nameparacetamol:</label><br>
+  <label>Medicine Name:</label><br>
   <input type="text" id="medicineName"><br><br>
 
   <label>Batch Number:</label><br>
