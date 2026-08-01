@@ -180,3 +180,18 @@ localStorage.setItem("userRole", role);
 
 </body>
 </html>
+let stockTable = document.getElementById("stockReportTable");
+
+if (stockTable) {
+  let medicines = JSON.parse(localStorage.getItem("medicines")) || [];
+
+  medicines.forEach(medicine => {
+    stockTable.innerHTML += `
+      <tr>
+        <td>${medicine.name}</td>
+        <td>${medicine.quantity}</td>
+        <td>${medicine.expiry}</td>
+      </tr>
+    `;
+  });
+}
