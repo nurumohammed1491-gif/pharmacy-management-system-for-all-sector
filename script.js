@@ -230,7 +230,7 @@ if (med) {
     localStorage.setItem("medicines", JSON.stringify(medicines));
 });
 
-    localStorage.setItem("purchases", JSON.stringify(purchases));
+    localStorage.setItem("purchases", JSON.stringify(purchases));localStorage.setItem("medicines", JSON.stringify(medicines));
 
     alert("Purchase saved successfully!");
 
