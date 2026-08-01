@@ -20,7 +20,21 @@
 
   <label>Expiry Date:</label><br>
   <input type="date" id="expiryDate"><br><br>
+<h2>Medicine List</h2>
 
+<table border="1">
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Batch</th>
+      <th>Quantity</th>
+      <th>Expiry Date</th>
+    </tr>
+  </thead>
+
+  <tbody id="medicineTableBody">
+  </tbody>
+</table>
   <button type="button" onclick="saveMedicine()">Save</button>
 </form>
 <h2>Registered Medicines</h2>
