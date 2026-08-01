@@ -82,4 +82,27 @@ if (low) {
   }).length;
 
   low.textContent = lowCount;
+}let patients = JSON.parse(localStorage.getItem("patients")) || [];
+
+let patientForm = document.getElementById("patientForm");
+
+if (patientForm) {
+  patientForm.addEventListener("submit", function(event) {
+    event.preventDefault();
+
+    const patient = {
+      name: document.getElementById("patientName").value,
+      phone: document.getElementById("phoneNumber").value,
+      id: document.getElementById("patientId").value,
+      service: document.getElementById("serviceType").value
+    };
+
+    patients.push(patient);
+
+    localStorage.setItem("patients", JSON.stringify(patients));
+
+    alert("Patient saved successfully!");
+
+    patientForm.reset();
+  });
 }
