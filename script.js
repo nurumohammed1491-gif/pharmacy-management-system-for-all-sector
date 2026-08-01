@@ -208,3 +208,27 @@ function saveSettings() {
 
   alert("Settings saved successfully!");
 }
+let suppliers = JSON.parse(localStorage.getItem("suppliers")) || [];
+
+let supplierForm = document.getElementById("supplierForm");
+
+if (supplierForm) {
+  supplierForm.addEventListener("submit", function(event) {
+    event.preventDefault();
+
+    const supplier = {
+      name: document.getElementById("supplierName").value,
+      company: document.getElementById("companyName").value,
+      phone: document.getElementById("supplierPhone").value,
+      address: document.getElementById("supplierAddress").value
+    };
+
+    suppliers.push(supplier);
+
+    localStorage.setItem("suppliers", JSON.stringify(suppliers));
+
+    alert("Supplier saved successfully!");
+
+    supplierForm.reset();
+  });
+}
