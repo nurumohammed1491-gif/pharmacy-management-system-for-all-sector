@@ -42,6 +42,18 @@ deleteBtn.onclick = function() {
 };
 
 deleteCell.appendChild(deleteBtn);
-}
+}let editCell = row.insertCell(5);
+let editBtn = document.createElement("button");
+
+editBtn.textContent = "Edit";
+
+editBtn.onclick = function() {
+  document.getElementById("medicineName").value = medicine.name;
+  document.getElementById("batchNumber").value = medicine.batch;
+  document.getElementById("quantity").value = medicine.quantity;
+  document.getElementById("expiryDate").value = medicine.expiry;
+};
+
+editCell.appendChild(editBtn);
 
 displayMedicines();
