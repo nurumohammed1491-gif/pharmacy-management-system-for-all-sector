@@ -54,7 +54,9 @@ medicines.forEach(medicine => {
       <td>${medicine.name}</td>
       <td>${medicine.batch}</td>
       <td>${medicine.quantity}</td>
-      <td>${medicine.expiry}</td>
+      <td>${medicine.expiry}</td><td>
+${medicine.quantity <= 10 ? "Low Stock" : "Available"}
+</td>
     </tr>
   `;
 });
