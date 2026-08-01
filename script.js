@@ -69,4 +69,17 @@ if (medicine.quantity <= 10) {
 
 editCell.appendChild(editBtn);
 
-displayMedicines();
+displayMedicines();let total = document.getElementById("totalMedicines");
+let low = document.getElementById("lowStock");
+
+if (total) {
+  total.textContent = medicines.length;
+}
+
+if (low) {
+  let lowCount = medicines.filter(function(medicine) {
+    return medicine.quantity <= 10;
+  }).length;
+
+  low.textContent = lowCount;
+}
