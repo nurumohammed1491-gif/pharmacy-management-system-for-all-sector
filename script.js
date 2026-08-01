@@ -18,3 +18,21 @@ document.getElementById("medicineForm").addEventListener("submit", function(even
 
   document.getElementById("medicineForm").reset();
 });
+function displayMedicines() {
+  const tableBody = document.getElementById("medicineTableBody");
+
+  if (!tableBody) return;
+
+  tableBody.innerHTML = "";
+
+  medicines.forEach(function(medicine) {
+    const row = tableBody.insertRow();
+
+    row.insertCell(0).textContent = medicine.name;
+    row.insertCell(1).textContent = medicine.batch;
+    row.insertCell(2).textContent = medicine.quantity;
+    row.insertCell(3).textContent = medicine.expiry;
+  });
+}
+
+displayMedicines();
