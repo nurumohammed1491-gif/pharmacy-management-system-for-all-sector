@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Purchase List</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<h1>Purchase List</h1>
+
+<table border="1">
+  <thead>
+    <tr>
+      <th>Medicine</th>
+      <th>Supplier</th>
+      <th>Quantity</th>
+      <th>Purchase Date</th>
+    </tr>
+  </thead>
+
+  <tbody id="purchaseTable"></tbody>
+</table>
+
+<br>
+
+<a href="purchase-registration.html">Add New Purchase</a><br>
+<a href="index.html">Back to Home</a>
+
+<script>
+const purchases = JSON.parse(localStorage.getItem("purchases")) || [];
+
+const table = document.getElementById("purchaseTable");
+
+purchases.forEach(function(purchase) {
+  table.innerHTML += `
+    <tr>
+      <td>${purchase.medicine}</td>
+      <td>${purchase.supplier}</td>
+      <td>${purchase.quantity}</td>
+      <td>${purchase.date}</td>
+    </tr>
+  `;
+});
+</script>
+
+</body>
+</html>
