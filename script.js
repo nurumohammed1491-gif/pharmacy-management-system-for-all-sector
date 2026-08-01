@@ -221,7 +221,14 @@ if (purchaseForm) {
       date: document.getElementById("purchaseDate").value
     };
 
-    purchases.push(purchase);
+    purchases.push(purchaselet medicines = JSON.parse(localStorage.getItem("medicines")) || [];
+
+let med = medicines.find(m => m.name === purchase.medicine);
+
+if (med) {
+    med.quantity = Number(med.quantity) + Number(purchase.quantity);
+    localStorage.setItem("medicines", JSON.stringify(medicines));
+});
 
     localStorage.setItem("purchases", JSON.stringify(purchases));
 
