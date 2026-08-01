@@ -243,3 +243,20 @@ if (purchaseMedicine) {
     purchaseMedicine.appendChild(option);
   });
 }
+let stockReportTable = document.getElementById("stockReportTable");
+
+if (stockReportTable) {
+  let medicines = JSON.parse(localStorage.getItem("medicines")) || [];
+
+  stockReportTable.innerHTML = "";
+
+  medicines.forEach(function(medicine) {
+    stockReportTable.innerHTML += `
+      <tr>
+        <td>${medicine.name}</td>
+        <td>${medicine.quantity}</td>
+        <td>${medicine.expiry}</td>
+      </tr>
+    `;
+  });
+}
