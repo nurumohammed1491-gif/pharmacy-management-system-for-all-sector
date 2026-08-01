@@ -35,3 +35,8 @@ document.getElementById("medicineForm").addEventListener("submit", function(even
 
     document.getElementById("medicineForm").reset();
 });
+let medicines = JSON.parse(localStorage.getItem("medicines")) || [];
+
+function saveMedicines() {
+    localStorage.setItem("medicines", JSON.stringify(medicines));
+}
