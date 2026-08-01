@@ -232,3 +232,27 @@ if (supplierForm) {
     supplierForm.reset();
   });
 }
+let purchases = JSON.parse(localStorage.getItem("purchases")) || [];
+
+let purchaseForm = document.getElementById("purchaseForm");
+
+if (purchaseForm) {
+  purchaseForm.addEventListener("submit", function(event) {
+    event.preventDefault();
+
+    const purchase = {
+      medicine: document.getElementById("purchaseMedicine").value,
+      supplier: document.getElementById("purchaseSupplier").value,
+      quantity: document.getElementById("purchaseQuantity").value,
+      date: document.getElementById("purchaseDate").value
+    };
+
+    purchases.push(purchase);
+
+    localStorage.setItem("purchases", JSON.stringify(purchases));
+
+    alert("Purchase saved successfully!");
+
+    purchaseForm.reset();
+  });
+}
