@@ -31,7 +31,14 @@ function displayMedicines() {
     row.insertCell(0).textContent = medicine.name;
     row.insertCell(1).textContent = medicine.batch;
     row.insertCell(2).textContent = medicine.quantity;
-    row.insertCell(3).textContent = medicine.expiry;
+    row.insertCell(3).textContent = medicine.expiry;let expiryDate = new Date(medicine.expiry);
+let today = new Date();
+
+let days = Math.ceil((expiryDate - today) / (1000 * 60 * 60 * 24));
+
+if (days <= 30) {
+  alert("Warning: " + medicine.name + " expiry is near!");
+}
   });let deleteCell = row.insertCell(4);
 let deleteBtn = document.createElement("button");
 
