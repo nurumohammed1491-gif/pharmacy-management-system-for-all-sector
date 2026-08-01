@@ -14,7 +14,7 @@
 
   <label>Batch Number:</label><br>
   <input type="text" id="batchNumber"><br><br>
-
+<button type="submit">Save</button>
   <label>Quantity:</label><br>
   <input type="number" id="quantity"><br><br>
 
