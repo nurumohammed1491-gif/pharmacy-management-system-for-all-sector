@@ -129,7 +129,7 @@ if (med) {
     localStorage.setItem("medicines", JSON.stringify(medicines));
 }
 
-    localStorage.setItem("dispensing", JSON.stringify(dispensing));
+    localStorage.setItem("dispensing", JSON.stringify(dispensing));localStorage.setItem("medicines", JSON.stringify(medicines));
 
     alert("Dispensing saved successfully!");
 
