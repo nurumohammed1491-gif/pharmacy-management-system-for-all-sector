@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Medicine List</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<h1>Medicine List</h1>
+
+<table border="1">
+  <thead>
+    <tr>
+      <th>Medicine</th>
+      <th>Batch</th>
+      <th>Quantity</th>
+      <th>Expiry Date</th>
+    </tr>
+  </thead>
+  <tbody id="medicineTable"></tbody>
+</table>
+
+<br>
+
+<a href="medicine-registration.html">Add New Medicine</a><br>
+<a href="index.html">Back to Home</a>
+
+<script>
+const medicines = JSON.parse(localStorage.getItem("medicines")) || [];
+const table = document.getElementById("medicineTable");
+
+medicines.forEach(medicine => {
+  table.innerHTML += `
+    <tr>
+      <td>${medicine.name}</td>
+      <td>${medicine.batch}</td>
+      <td>${medicine.quantity}</td>
+      <td>${medicine.expiry}</td>
+    </tr>
+  `;
+});
+</script>
+
+</body>
+</html>
