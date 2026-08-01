@@ -1,49 +1,5 @@
-body {
-    font-family: Arial, sans-serif;
-    background: #f4f7fa;
-    margin: 0;
-    padding: 0;
-}
+// Pharmacy Management System
 
-h1 {
-    background: #0077b6;
-    color: white;
-    text-align: center;
-    padding: 20px;
-    margin: 0;
-}
-
-p {
-    text-align: center;
-    font-size: 18px;
-}
-
-h2 {
-    margin-left: 20px;
-    color: #0077b6;
-}
-
-ul {
-    list-style: none;
-    padding: 20px;
-}
-
-li {
-    margin: 10px 0;
-}
-
-a {
-    display: block;
-    background: white;
-    padding: 12px;
-    border-radius: 8px;
-    text-decoration: none;
-    color: #0077b6;
-    font-weight: bold;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
-}
-
-a:hover {
-    background: #0077b6;
-    color: white;
-}
+document.addEventListener("DOMContentLoaded", function () {
+    console.log("Pharmacy Management System Loaded Successfully!");
+});
