@@ -124,7 +124,9 @@ if (dispensingForm) {
 
 let med = medicines.find(m => m.name === record.medicine);
 
-if (med) {
+if (med) {if (Number(med.quantity) <= 10) {
+    alert("Low Stock: " + med.name);
+}
     med.quantity = Number(med.quantity) - Number(record.quantity);
     localStorage.setItem("medicines", JSON.stringify(medicines));
 }
