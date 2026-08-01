@@ -135,7 +135,9 @@ if (loginForm) {
     event.preventDefault();
 
     let username = document.getElementById("username").value;
-    let password = document.getElementById("password").value;
+    let password = document.getElementById("password").value;let role = document.getElementById("role").value;
+
+localStorage.setItem("userRole", role);
 
     if (username === "admin" && password === "1234") {
       alert("Login successful!");
