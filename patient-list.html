@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Patient List</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<h1>Patient List</h1>
+
+<table border="1">
+  <thead>
+    <tr>
+      <th>Patient Name</th>
+      <th>Phone</th>
+      <th>Patient ID</th>
+      <th>Service Type</th>
+    </tr>
+  </thead>
+
+  <tbody id="patientTable">
+  </tbody>
+</table>
+
+<br>
+
+<a href="patient-registration.html">Add New Patient</a><br>
+<a href="index.html">Back to Home</a>
+
+<script>
+const patients = JSON.parse(localStorage.getItem("patients")) || [];
+
+const table = document.getElementById("patientTable");
+
+patients.forEach(patient => {
+  table.innerHTML += `
+    <tr>
+      <td>${patient.name}</td>
+      <td>${patient.phone}</td>
+      <td>${patient.id}</td>
+      <td>${patient.service}</td>
+    </tr>
+  `;
+});
+</script>
+
+</body>
+</html>
