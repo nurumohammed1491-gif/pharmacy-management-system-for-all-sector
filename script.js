@@ -256,3 +256,16 @@ if (purchaseForm) {
     purchaseForm.reset();
   });
 }
+let purchaseMedicine = document.getElementById("purchaseMedicine");
+
+if (purchaseMedicine) {
+  let medicines = JSON.parse(localStorage.getItem("medicines")) || [];
+
+  medicines.forEach(function(medicine) {
+    let option = document.createElement("option");
+    option.value = medicine.name;
+    option.textContent = medicine.name;
+
+    purchaseMedicine.appendChild(option);
+  });
+}
