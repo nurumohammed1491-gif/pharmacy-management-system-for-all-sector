@@ -6,7 +6,25 @@
 </head>
 <body>
 
-<h1>Medicine List</h1>
+<h1>Medicine List</h1><input type="text" id="searchMedicine" placeholder="Search medicine...">
+<button onclick="searchMedicine()">Search</button>function searchMedicine() {
+  const search = document.getElementById("searchMedicine").value.toLowerCase();
+
+  table.innerHTML = "";
+
+  medicines
+    .filter(medicine => medicine.name.toLowerCase().includes(search))
+    .forEach(medicine => {
+      table.innerHTML += `
+        <tr>
+          <td>${medicine.name}</td>
+          <td>${medicine.batch}</td>
+          <td>${medicine.quantity}</td>
+          <td>${medicine.expiry}</td>
+        </tr>
+      `;
+    });
+}
 
 <table border="1">
   <thead>
