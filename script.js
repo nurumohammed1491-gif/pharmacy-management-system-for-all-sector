@@ -154,3 +154,29 @@ localStorage.setItem("userRole", role);
 
   window.location.href = "login.html";
 }
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Pharmacy Report</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<h1>Pharmacy Report</h1>
+
+<h2>Total Medicines</h2>
+<p id="reportMedicines">0</p>
+
+<h2>Total Patients</h2>
+<p id="reportPatients">0</p>
+
+<h2>Total Dispensing</h2>
+<p id="reportDispensing">0</p>
+
+<a href="index.html">Back to Home</a>
+
+<script src="script.js"></script>
+
+</body>
+</html>
