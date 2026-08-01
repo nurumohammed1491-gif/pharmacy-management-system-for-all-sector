@@ -105,4 +105,27 @@ if (patientForm) {
 
     patientForm.reset();
   });
+}let dispensing = JSON.parse(localStorage.getItem("dispensing")) || [];
+
+let dispensingForm = document.getElementById("dispensingForm");
+
+if (dispensingForm) {
+  dispensingForm.addEventListener("submit", function(event) {
+    event.preventDefault();
+
+    const record = {
+      patient: document.getElementById("dispensePatient").value,
+      medicine: document.getElementById("dispenseMedicine").value,
+      quantity: document.getElementById("dispenseQuantity").value,
+      date: new Date().toLocaleString()
+    };
+
+    dispensing.push(record);
+
+    localStorage.setItem("dispensing", JSON.stringify(dispensing));
+
+    alert("Dispensing saved successfully!");
+
+    dispensingForm.reset();
+  });
 }
