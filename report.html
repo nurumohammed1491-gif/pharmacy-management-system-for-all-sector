@@ -50,3 +50,20 @@
 
 </body>
 </html>
+let expiredTable = document.getElementById("expiredTable");
+
+if (expiredTable) {
+  let medicines = JSON.parse(localStorage.getItem("medicines")) || [];
+  let today = new Date();
+
+  medicines.forEach(function(medicine) {
+    if (new Date(medicine.expiry) < today) {
+      expiredTable.innerHTML += `
+        <tr>
+          <td>${medicine.name}</td>
+          <td>${medicine.expiry}</td>
+        </tr>
+      `;
+    }
+  });
+}
