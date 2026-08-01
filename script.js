@@ -50,7 +50,13 @@ editBtn.textContent = "Edit";
 editBtn.onclick = function() {
   document.getElementById("medicineName").value = medicine.name;
   document.getElementById("batchNumber").value = medicine.batch;
-  document.getElementById("quantity").value = medicine.quantity;
+  document.getElementById("quantity").value = medicine.quantity;let statusCell = row.insertCell(4);
+
+if (medicine.quantity <= 10) {
+  statusCell.textContent = "Low Stock";
+} else {
+  statusCell.textContent = "Available";
+}
   document.getElementById("expiryDate").value = medicine.expiry;
 };
 
