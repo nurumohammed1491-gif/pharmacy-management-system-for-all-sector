@@ -195,3 +195,16 @@ if (stockTable) {
     `;
   });
 }
+function saveSettings() {
+  localStorage.setItem(
+    "facilityName",
+    document.getElementById("facilityName").value
+  );
+
+  localStorage.setItem(
+    "pharmacyName",
+    document.getElementById("pharmacyName").value
+  );
+
+  alert("Settings saved successfully!");
+}
