@@ -32,7 +32,16 @@ function displayMedicines() {
     row.insertCell(1).textContent = medicine.batch;
     row.insertCell(2).textContent = medicine.quantity;
     row.insertCell(3).textContent = medicine.expiry;
-  });
+  });let deleteCell = row.insertCell(4);
+let deleteBtn = document.createElement("button");
+
+deleteBtn.textContent = "Delete";
+
+deleteBtn.onclick = function() {
+  row.remove();
+};
+
+deleteCell.appendChild(deleteBtn);
 }
 
 displayMedicines();
