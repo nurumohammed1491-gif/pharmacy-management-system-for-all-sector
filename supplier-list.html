@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Supplier List</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<h1>Supplier List</h1>
+
+<table border="1">
+  <thead>
+    <tr>
+      <th>Supplier Name</th>
+      <th>Company</th>
+      <th>Phone</th>
+      <th>Address</th>
+    </tr>
+  </thead>
+
+  <tbody id="supplierTable"></tbody>
+</table>
+
+<br>
+
+<a href="supplier-registration.html">Add New Supplier</a><br>
+<a href="index.html">Back to Home</a>
+
+<script>
+const suppliers = JSON.parse(localStorage.getItem("suppliers")) || [];
+
+const table = document.getElementById("supplierTable");
+
+suppliers.forEach(supplier => {
+  table.innerHTML += `
+    <tr>
+      <td>${supplier.name}</td>
+      <td>${supplier.company}</td>
+      <td>${supplier.phone}</td>
+      <td>${supplier.address}</td>
+    </tr>
+  `;
+});
+</script>
+
+</body>
+</html>
