@@ -147,4 +147,10 @@ localStorage.setItem("userRole", role);
       alert("Wrong username or password!");
     }
   });
+}function logout() {
+  localStorage.removeItem("userRole");
+
+  alert("Logged out successfully!");
+
+  window.location.href = "login.html";
 }
