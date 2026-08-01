@@ -120,7 +120,14 @@ if (dispensingForm) {
       date: new Date().toLocaleString()
     };
 
-    dispensing.push(record);
+    dispensing.push(record);let medicines = JSON.parse(localStorage.getItem("medicines")) || [];
+
+let med = medicines.find(m => m.name === record.medicine);
+
+if (med) {
+    med.quantity = Number(med.quantity) - Number(record.quantity);
+    localStorage.setItem("medicines", JSON.stringify(medicines));
+}
 
     localStorage.setItem("dispensing", JSON.stringify(dispensing));
 
