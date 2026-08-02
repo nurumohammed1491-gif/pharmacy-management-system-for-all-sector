@@ -1,1 +1,37 @@
+<!DOCTYPE html>
+<html lang="am">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Medicine Registration</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <h1>Medicine Registration</h1>
+
+    <form id="medicineForm">
+        <label for="medicineName">Medicine Name:</label>
+        <input type="text" id="medicineName" placeholder="Enter medicine name" required>
+
+        <label for="batchNumber">Batch Number:</label>
+        <input type="text" id="batchNumber" placeholder="Enter batch number" required>
+
+        <label for="quantity">Quantity:</label>
+        <input type="number" id="quantity" placeholder="Enter quantity" min="1" required>
+
+        <label for="expiryDate">Expiry Date:</label>
+        <input type="date" id="expiryDate" required>
+
+        <button type="submit">Save Medicine</button>
+    </form>
+
+    <div style="text-align: center; margin-top: 15px;">
+        <a href="medicine-list.html" style="display: inline-block; width: auto; padding: 10px 20px; margin-right: 10px;">View Medicine List</a>
+        <a href="dashboard.html" style="display: inline-block; width: auto; padding: 10px 20px;">Dashboard</a>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
 
