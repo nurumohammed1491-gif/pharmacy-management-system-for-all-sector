@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="am">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Medicine List - Pharmacy Management</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <h1>Medicine Inventory List</h1>
+
+    <div style="text-align: center; margin-bottom: 15px;">
+        <a href="add-medicine.html" style="display: inline-block; width: auto; padding: 10px 20px; margin-right: 10px;">+ Add New Medicine</a>
+        <a href="dashboard.html" style="display: inline-block; width: auto; padding: 10px 20px;">Dashboard</a>
+    </div>
+
+    <!-- የመድኃኒቶች ዝርዝር ማሳያ ሰንጠረዥ -->
+    <table>
+        <thead>
+            <tr>
+                <th>Medicine Name</th>
+                <th>Batch Number</th>
+                <th>Quantity</th>
+                <th>Expiry Date</th>
+                <th>Status</th>
+                <th>Delete</th>
+                <th>Edit</th>
+            </tr>
+        </thead>
+        <tbody id="medicineTableBody">
+            <!-- በJavaScript (script.js) አማካኝነት ዳታው እዚህ ጋር በራሱ ይሞላል -->
+        </tbody>
+    </table>
+
+    <script src="script.js"></script>
+</body>
+</html>
