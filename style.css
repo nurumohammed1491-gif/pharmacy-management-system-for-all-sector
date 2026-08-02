@@ -1,16 +1,24 @@
+/* --- General Page Styling --- */
 body {
     font-family: Arial, sans-serif;
-    background: #f4f7fa;
+    background-color: #f4f7fa;
     margin: 0;
     padding: 0;
 }
 
+/* --- Headings --- */
 h1 {
-    background: #0077b6;
+    background-color: #0077b6;
     color: white;
     text-align: center;
     padding: 20px;
-    margin: 0;
+    margin: 0 0 20px 0;
+}
+
+h2 {
+    color: #0077b6;
+    text-align: center;
+    margin-top: 20px;
 }
 
 p {
@@ -18,14 +26,12 @@ p {
     font-size: 18px;
 }
 
-h2 {
-    margin-left: 20px;
-    color: #0077b6;
-}
-
+/* --- Navigation & Links --- */
 ul {
     list-style: none;
     padding: 20px;
+    max-width: 500px;
+    margin: 0 auto;
 }
 
 li {
@@ -40,44 +46,72 @@ a {
     text-decoration: none;
     color: #0077b6;
     font-weight: bold;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    transition: background 0.3s, color 0.3s;
 }
 
 a:hover {
     background: #0077b6;
     color: white;
-}body {
-  font-family: Arial, sans-serif;
-  margin: 20px;
 }
 
-h1, h2 {
-  text-align: center;
-}
-
+/* --- Forms & Inputs --- */
 form {
-  max-width: 400px;
-  margin: auto;
+    max-width: 400px;
+    margin: 20px auto;
+    padding: 20px;
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
 }
 
-input {
-  width: 100%;
-  padding: 8px;
-  margin: 8px 0;
+input, select {
+    width: 100%;
+    padding: 10px;
+    margin: 8px 0 16px 0;
+    box-sizing: border-box;
+    border: 1px solid #ccc;
+    border-radius: 4px;
 }
 
 button {
-  padding: 10px 15px;
-  cursor: pointer;
+    width: 100%;
+    background-color: #0077b6;
+    color: white;
+    border: none;
+    padding: 12px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: bold;
 }
 
+button:hover {
+    background-color: #005b8a;
+}
+
+/* --- Tables --- */
 table {
-  width: 100%;
-  border-collapse: collapse;
-  margin-top: 20px;
+    width: 90%;
+    margin: 20px auto;
+    border-collapse: collapse;
+    background: white;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    border-radius: 8px;
+    overflow: hidden;
 }
 
 th, td {
-  padding: 10px;
-  text-align: center;
+    padding: 12px;
+    text-align: center;
+    border-bottom: 1px solid #ddd;
+}
+
+th {
+    background-color: #0077b6;
+    color: white;
+}
+
+tr:hover {
+    background-color: #f1f1f1;
 }
